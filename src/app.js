@@ -15,6 +15,9 @@ import transactionRouter from "./routes/transaction.routes.js";
 /**
  * Use Routes
  */
+app.use("/", (req, res) => {
+  console.log("Ledger service is up and runnnig");
+});
 app.use("/api/auth", userRoute);
 app.use("/api/account", accountRouter);
 app.use("/api/transactions", transactionRouter);
